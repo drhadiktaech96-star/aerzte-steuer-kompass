@@ -1,0 +1,47 @@
+name: Warteliste Vollversion
+description: Unverbindlich auf die Warteliste für die Vollversion setzen
+title: "Warteliste: "
+labels: ["warteliste"]
+body:
+  - type: markdown
+    attributes:
+      value: "Danke! Kostenlos und unverbindlich. Bitte keine persönlichen Steuerdaten hier eintragen – Issues sind öffentlich."
+  - type: dropdown
+    id: situation
+    attributes:
+      label: Deine Situation
+      options:
+        - Assistenzarzt/-ärztin mit ausländischem Abschluss
+        - In Anerkennung (KP/FSP), noch nicht angestellt
+        - Assistenzarzt/-ärztin mit deutschem Abschluss
+        - Facharzt/Fachärztin angestellt
+        - Andere
+    validations:
+      required: true
+  - type: checkboxes
+    id: interesse
+    attributes:
+      label: Was interessiert dich am meisten?
+      options:
+        - label: Anerkennungskosten / Verlustvortrag
+        - label: Rückblick auf frühere Jahre
+        - label: Familie / Unterhalt ins Ausland
+        - label: Bescheid prüfen / Einspruch
+  - type: dropdown
+    id: preis
+    attributes:
+      label: Würdest du 39 € für die Vollversion zahlen?
+      options:
+        - Ja
+        - Vielleicht
+        - Nein, zu teuer
+    validations:
+      required: true
+  - type: dropdown
+    id: sprache
+    attributes:
+      label: Bevorzugte Sprache
+      options:
+        - Deutsch
+        - Arabisch
+        - Beides
